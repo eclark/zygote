@@ -1,0 +1,13 @@
+#!@PYTHON@ -tt
+
+import sys, subprocess
+
+try:
+    retcode = subprocess.call(["../src/zygote"])
+    if retcode < 0:
+        print >>sys.stderr, "Process terminated by signal", -retcode
+    else:
+        print >>sys.stderr, "Process returned", retcode
+except OSError, e:
+    print >>sys.stderr, "Execution failed:", e
+
