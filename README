@@ -1,0 +1,40 @@
+ABOUT
+
+Zygote is a set of files demonstrating a minimal use of GNU autotools for
+building a program written in C, with tests written in Python where it is
+available.
+
+LICENSE
+
+All files in this package were written by Eric Clark <zerohp@gmail.com> and
+are released into the PUBLIC DOMAIN. Your projects originating from this
+should choose a license that reflects your goals.
+
+GETTING STARTED
+
+The following steps will help you get started with a new program based on
+files included in this package.
+
+  1. Download the package from github.
+     git clone git://github.com/eclark/zygote.git
+
+  2. Verify that it works on your platform.
+     cd zygote
+     autoreconf -fi
+     ./configure
+     make check
+
+  3. Remove the results of step 2, and start fresh.
+     git clean -df
+
+  4. Remove origin from Git so you can add your own remote.
+     git remote rm origin
+
+  5. Find all references to zygote and change them.
+     grep -rn zygote .
+     # customize each line containing zygote for your project
+
+  6. Finish up and remove this README
+     git rm README
+     git commit -a -m "End of Zygote; Start of <YOUR PROJECT>"
+
