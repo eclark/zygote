@@ -31,10 +31,12 @@ files included in this package.
      git remote rm origin
 
   5. Find all references to zygote and change them.
-     grep -rn zygote .
+     grep -rn zygote *
      # customize each line containing zygote for your project
 
   6. Finish up and remove this README
      git rm README
      git commit -a -m "End of Zygote; Start of <YOUR PROJECT>"
+     cd ..
+     mv zygote your_project
 
